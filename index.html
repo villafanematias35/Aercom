@@ -19,8 +19,8 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background: linear-gradient(180deg, var(--bg1), var(--bg2));
-  color: var(--text);
+  background: #0b1f3a; /* 👈 color sólido limpio */
+  color: #e2e8f0;
 }
 
 /* CONTENEDOR */
@@ -73,7 +73,7 @@ button {
   justify-content: center;
   padding: 30px;
   background:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
     url("img/inicio.jpeg") center/cover no-repeat;
 }
 
@@ -142,11 +142,8 @@ button {
 
 /* PROBLEMAS */
 .problem {
-  background: rgba(255,255,255,0.05);
-  padding: 14px;
-  border-radius: 12px;
-  margin: 10px 0;
-  border-left: 4px solid var(--accent);
+  background: rgba(255,255,255,0.08);
+  border-left: 4px solid #60a5fa;
 }
 
 /* RESPONSIVE */
@@ -155,6 +152,11 @@ button {
   .card { height: 180px; }
   .hero-img img { height: 220px; }
 }
+.screen {
+  display: none;
+  min-height: 100vh; /* 👈 ocupa toda la pantalla */
+  background: #0b1f3a; /* 👈 evita cortes */
+}  
 </style>
 </head>
 
