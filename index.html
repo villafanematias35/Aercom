@@ -75,7 +75,7 @@ button {
   justify-content: center;
   padding: 30px;
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-              url("imagen/inicio.jpeg") center/cover no-repeat;
+              url("img/inicio.jpeg") center/cover no-repeat;
 }
 
 .hero h1 {
@@ -200,22 +200,22 @@ button {
     <h2 style="margin-top:50px;">Seleccioná un equipo</h2>
 
     <div class="card" onclick="verEquipo('grupo')">
-      <img src="imagen/grupo.jpg">
+      <img src="img/Grupo Electrogeno.jpeg">
       <div class="overlay-text">⚡ Grupo electrógeno</div>
     </div>
 
     <div class="card" onclick="verEquipo('moto')">
-      <img src="imagen/moto.jpg">
+      <img src="img/moto.jpg">
       <div class="overlay-text">🔧 Motocompresor</div>
     </div>
 
     <div class="card" onclick="verEquipo('electro')">
-      <img src="imagen/electro.jpg">
+      <img src="img/electro.jpg">
       <div class="overlay-text">🌀 Electrocompresor</div>
     </div>
 
     <div class="card" onclick="verEquipo('torre')">
-      <img src="imagen/torre.jpg">
+      <img src="img/torre.jpg">
       <div class="overlay-text">💡 Torre de iluminación</div>
     </div>
 
@@ -259,7 +259,7 @@ function verEquipo(nombre) {
   let data = {
     grupo: {
       titulo: "Grupo electrógeno",
-      img: "imagen/grupo.jpg",
+      img: "img/Grupo Electrogeno.jpeg",
       desc: "Energía confiable para operaciones críticas.",
       problemas: [
         "🔥 Sobrecalentamiento → Limpieza de radiador",
@@ -269,7 +269,7 @@ function verEquipo(nombre) {
     },
     moto: {
       titulo: "Motocompresor",
-      img: "imagen/moto.jpg",
+      img: "img/moto.jpg",
       desc: "Compresión eficiente para uso industrial.",
       problemas: [
         "⚠️ Baja presión → Ajuste de válvulas",
@@ -278,7 +278,7 @@ function verEquipo(nombre) {
     },
     electro: {
       titulo: "Electrocompresor",
-      img: "imagen/electro.jpg",
+      img: "img/electro.jpg",
       desc: "Soluciones eléctricas eficientes.",
       problemas: [
         "⛔ Paradas → Control eléctrico",
@@ -287,7 +287,7 @@ function verEquipo(nombre) {
     },
     torre: {
       titulo: "Torre de iluminación",
-      img: "imagen/torre.jpg",
+      img: "img/torre.jpg",
       desc: "Iluminación para obras y eventos.",
       problemas: [
         "💡 Falla de luz → Cambio de lámparas",
