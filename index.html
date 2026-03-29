@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aercom</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -68,18 +69,17 @@ button {
 
 /* HERO */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px;
+  padding: 30px;
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-              url("img/inicio.jpeg") center/cover;
+              url("imagen/inicio.jpeg") center/cover no-repeat;
 }
 
 .hero h1 {
-  font-size: 44px;
-  letter-spacing: 1px;
+  font-size: 42px;
 }
 
 .hero p {
@@ -90,7 +90,7 @@ button {
 /* TARJETAS */
 .card {
   position: relative;
-  height: 250px;
+  height: 230px;
   border-radius: 22px;
   overflow: hidden;
   margin-bottom: 25px;
@@ -129,14 +129,12 @@ button {
 }
 
 .overlay {
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 10px 0;
   font-size: 26px;
   font-weight: 600;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-/* TEXTO */
 #descripcion {
   opacity: 0.85;
   margin-bottom: 20px;
@@ -149,7 +147,36 @@ button {
   border-radius: 14px;
   margin: 12px 0;
   border-left: 4px solid var(--accent);
-  box-shadow: inset 0 0 10px rgba(255,255,255,0.03);
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 600px) {
+
+  .container {
+    padding: 15px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .card {
+    height: 180px;
+  }
+
+  .overlay-text {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .hero-img img {
+    height: 220px;
+  }
+
 }
 </style>
 </head>
@@ -173,22 +200,22 @@ button {
     <h2 style="margin-top:50px;">Seleccioná un equipo</h2>
 
     <div class="card" onclick="verEquipo('grupo')">
-      <img src="img/Grupo Electrogeno.jpeg" onerror="this.src='img/default.jpg'">
+      <img src="imagen/grupo.jpg">
       <div class="overlay-text">⚡ Grupo electrógeno</div>
     </div>
 
     <div class="card" onclick="verEquipo('moto')">
-      <img src="img/moto.jpg" onerror="this.src='img/default.jpg'">
+      <img src="imagen/moto.jpg">
       <div class="overlay-text">🔧 Motocompresor</div>
     </div>
 
     <div class="card" onclick="verEquipo('electro')">
-      <img src="img/electro.jpg" onerror="this.src='img/default.jpg'">
+      <img src="imagen/electro.jpg">
       <div class="overlay-text">🌀 Electrocompresor</div>
     </div>
 
     <div class="card" onclick="verEquipo('torre')">
-      <img src="img/torre.jpg" onerror="this.src='img/default.jpg'">
+      <img src="imagen/torre.jpg">
       <div class="overlay-text">💡 Torre de iluminación</div>
     </div>
 
@@ -232,7 +259,7 @@ function verEquipo(nombre) {
   let data = {
     grupo: {
       titulo: "Grupo electrógeno",
-      img: "img/Grupo Electrogeno.jpeg",
+      img: "imagen/grupo.jpg",
       desc: "Energía confiable para operaciones críticas.",
       problemas: [
         "🔥 Sobrecalentamiento → Limpieza de radiador",
@@ -242,7 +269,7 @@ function verEquipo(nombre) {
     },
     moto: {
       titulo: "Motocompresor",
-      img: "img/moto.jpg",
+      img: "imagen/moto.jpg",
       desc: "Compresión eficiente para uso industrial.",
       problemas: [
         "⚠️ Baja presión → Ajuste de válvulas",
@@ -251,7 +278,7 @@ function verEquipo(nombre) {
     },
     electro: {
       titulo: "Electrocompresor",
-      img: "img/electro.jpg",
+      img: "imagen/electro.jpg",
       desc: "Soluciones eléctricas eficientes.",
       problemas: [
         "⛔ Paradas → Control eléctrico",
@@ -260,7 +287,7 @@ function verEquipo(nombre) {
     },
     torre: {
       titulo: "Torre de iluminación",
-      img: "img/torre.jpg",
+      img: "imagen/torre.jpg",
       desc: "Iluminación para obras y eventos.",
       problemas: [
         "💡 Falla de luz → Cambio de lámparas",
